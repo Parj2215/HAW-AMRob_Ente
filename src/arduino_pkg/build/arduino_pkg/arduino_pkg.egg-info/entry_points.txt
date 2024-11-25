@@ -1,0 +1,3 @@
+[console_scripts]
+arduino_control_manual = arduino_pkg.arduino_control_manual:main
+

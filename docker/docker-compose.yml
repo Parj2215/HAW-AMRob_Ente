@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  manual_control:
+    build: .
+    network_mode: host
+    ipc: host
+    volumes:
+      - /home/parjanya/ros:/home/ros
+      - /home/parjanya/manual_motor_control:/manual_control
+    devices:
+      - /dev/ttyACM0:/dev/ttyACM0       # Arduino
+      - /dev/input/js0:/dev/input/js0   # Bluetooth joystick
+    environment:
+      - DISPLAY
+      - DBUS_SESSION_BUS_ADDRESS=unix:path=/var/run/dbus/system_bus_socket
+    privileged: true
+    tty: true
