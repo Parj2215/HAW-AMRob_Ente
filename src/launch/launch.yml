@@ -1,7 +1,0 @@
-launch:
-
-- node:
-    pkg: "arduino_pkg"
-    exec: "arduino_node"
-    name: "arduino_node"
-    namespace: "robot/controller"
